@@ -10,7 +10,7 @@ func (stack *Stack) Size() int {
 	return stack.length
 }
 
-func (stack *Stack) Add(value []ElementValue) {
+func (stack *Stack) Add(value []EContent) {
 	element := newElement(value)
 
 	if stack.Empty() {
@@ -24,15 +24,15 @@ func (stack *Stack) Add(value []ElementValue) {
 	stack.length++
 }
 
-func (stack *Stack) Top() []ElementValue {
-	value := []ElementValue{}
+func (stack *Stack) Top() []EContent {
+	value := []EContent{}
 	if !stack.Empty() {
 		return stack.topElement.Value
 	}
 	return value
 }
 
-func (stack *Stack) Pop() []ElementValue {
+func (stack *Stack) Pop() []EContent {
 	if !stack.Empty() {
 		stack.length--
 		currentElement := stack.topElement
@@ -45,7 +45,7 @@ func (stack *Stack) Pop() []ElementValue {
 		return currentElement.Value
 	}
 	fmt.Println("lista vazia")
-	return []ElementValue{}
+	return []EContent{}
 }
 
 func (stack *Stack) Run() []map[string][]interface{} {
@@ -53,9 +53,9 @@ func (stack *Stack) Run() []map[string][]interface{} {
 
 	for !stack.Empty() {
 		combinedElements := make(map[string][]interface{})
-		elementValues := stack.Pop()
+		EContents := stack.Pop()
 
-		for _, element := range elementValues {
+		for _, element := range EContents {
 			combinedElements[element.Key] = append(combinedElements[element.Key], element.Value)
 		}
 

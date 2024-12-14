@@ -18,12 +18,12 @@ func TestEmptyMethod(t *testing.T) {
 func TestStack(t *testing.T) {
 
 	myStack := NewStack()
-	myStack.Add([]ElementValue{
+	myStack.Add([]EContent{
 		{Key: "name", Value: "João"},
 		{Key: "age", Value: 32},
 		{Key: "profile", Value: "admin"},
 	})
-	myStack.Add([]ElementValue{
+	myStack.Add([]EContent{
 		{Key: "name", Value: "Maria"},
 		{Key: "age", Value: 24},
 		{Key: "profile", Value: "admin"},

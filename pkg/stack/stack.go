@@ -1,12 +1,12 @@
 package stack
 
-type ElementValue struct {
+type EContent struct {
 	Key   string
 	Value interface{}
 }
 
 type Element struct {
-	Value []ElementValue
+	Value []EContent
 	next  *Element
 }
 
@@ -22,7 +22,7 @@ func NewStack() Stack {
 	}
 }
 
-func newElement(value []ElementValue) Element {
+func newElement(value []EContent) Element {
 	return Element{
 		Value: value,
 		next:  nil,
