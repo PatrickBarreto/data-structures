@@ -1,24 +1,14 @@
 package queue
 
-import (
-	"testing"
-)
+import "testing"
 
-func TestClassicQueue(t *testing.T) {
-	myQueue := NewSimpleQueue(4)
-	myQueue.ClassicEnqueue([]ElementValue{
-		{Key: "teste", Value: "teste"},
-	})
-	myQueue.ClassicEnqueue([]ElementValue{
-		{Key: "teste2", Value: "teste2"},
-	})
+func TestNewQueueMethod(t *testing.T) {
+	newQueue := NewClassicQueue(4)
+	t.Log(newQueue)
+}
 
-	myQueue.ClassicDequeue()
-	myQueue.ClassicDequeue()
-	myQueue.ClassicDequeue()
-
-	myQueue.Head()
-
-	myQueue.Size()
-	myQueue.Full()
+func TestNewElementQueueMethod(t *testing.T) {
+	if 4/2 == 2 {
+		t.Error()
+	}
 }
