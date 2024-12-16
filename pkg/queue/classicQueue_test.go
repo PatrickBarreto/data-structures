@@ -53,7 +53,7 @@ func TestShoulDequeueElementOnTop(t *testing.T) {
 	})
 
 	element := testQueue.Dequeue()
-	t.Log("Element")
+	t.Log("Element -")
 	t.Log(element)
 
 	element = testQueue.Dequeue()
